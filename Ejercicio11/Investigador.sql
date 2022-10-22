@@ -1,0 +1,10 @@
+CREATE TABLE investigador (
+dni VARCHAR(8) NOT NULL,
+nom_apels NVARCHAR(255) NOT NULL,
+facultad INT NULL,
+PRIMARY KEY (dni),
+FOREIGN KEY (facultad)
+REFERENCES facultad (codigo)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);

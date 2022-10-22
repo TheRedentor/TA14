@@ -1,0 +1,15 @@
+CREATE TABLE reserva (
+dni VARCHAR(8) NOT NULL,
+num_serie CHAR(4) NOT NULL,
+comienzo DATETIME NOT NULL,
+fin DATETIME NOT NULL,
+PRIMARY KEY (dni, num_serie),
+FOREIGN KEY (dni)
+REFERENCES investigador (dni)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+FOREIGN KEY (num_serie)
+REFERENCES equipo (num_serie)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);

@@ -1,0 +1,10 @@
+CREATE TABLE equipo (
+num_serie CHAR(4) NOT NULL,
+nombre NVARCHAR(100) NOT NULL,
+facultad INT NULL,
+PRIMARY KEY (num_serie),
+FOREIGN KEY (facultad)
+REFERENCES facultad (codigo)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);

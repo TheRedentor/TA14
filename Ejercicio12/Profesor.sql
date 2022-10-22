@@ -1,0 +1,8 @@
+CREATE TABLE profesor(
+dni VARCHAR(8) NOT NULL PRIMARY KEY,
+nombre NVARCHAR(100) UNIQUE,
+apellidos NVARCHAR(255),
+direccion NVARCHAR(255),
+titulacion NVARCHAR(255),
+gana DOUBLE NOT NULL
+);
